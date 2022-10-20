@@ -8,8 +8,8 @@ import torch
 from transformers import Wav2Vec2CTCTokenizer, Wav2Vec2FeatureExtractor, Wav2Vec2Processor, Wav2Vec2ForCTC
 from transformers import TrainingArguments, Trainer
 
-import model_asr.prepare_dataset_asr as pda
-import model_asr.data_collator_ctc as dcc
+import prepare_dataset_asr as pda
+import data_collator_ctc as dcc
 
 
 def get_length(batch):

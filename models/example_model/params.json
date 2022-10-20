@@ -1,7 +1,7 @@
 {
     "mode": "train",
     "dataset": {
-        "part_name" : "example"
+        "part_name" : "example_tr_wiki"
     },
     "model": {
         "output_dir": "example_model",

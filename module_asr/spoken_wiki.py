@@ -31,13 +31,13 @@ _HOMEPAGE = ""
 _LICENSE = ""
 
 _LANGUAGES = {
-    "example": {
+    "example_tr_wiki": {
         "Language": "tr",
         "Date": "2022-10-01",
         "Size": "3.2MB",
         "Version": "1.0.0",
-        "Valid_Hr_Total": 0.0,
-        "Train_Hr_Total": 0.0
+        "Valid_Hr_Total": 0.13,
+        "Train_Hr_Total": 0.05
     },
 }
 
