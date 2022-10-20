@@ -35,13 +35,23 @@ Here, we explain the usage of the framework by creating a dataset from text coll
 We assume that you have a textual data that you want to create an SQA dataset from.
 
 1. **Audio data generation with TTS**  
+
 The folder module_tts/ contains functions to generate audio data from given textual data.
 The next command runs the necessary scripts at once for an example data: 
-> 
 
+  > sh scripts/run_all_tts.sh
 
-3. **Getting transcriptions from ASR**
+3. **Getting transcriptions from ASR** 
+The folder module_asr/ contains the functions to generate transcriptions from audio data.
+Please check the file module_asr/README.md for more detail. 
+If desired, an ASR model can be trained using:
 
+  > python module_asr/run_asr.py --config models/example_model/params.json 
+
+If evaluating the model: 
+
+  > python module_asr/run_asr.py --config models/example_model/params-eval.json
+ 
 4. **Generating Questions from QG**
 
 5. **Testing with QA model**
