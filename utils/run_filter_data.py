@@ -189,7 +189,6 @@ def main():
     """
     # Get the inputs
     inputs = parse_args()
-    import ipdb;ipdb.set_trace()
     data_frame = run_filter_data(inputs.input,
                                  max_word_flag=inputs.word_flag,
                                  max_word_nbr=int(inputs.max_word),
