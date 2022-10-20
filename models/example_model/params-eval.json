@@ -1,0 +1,46 @@
+{
+    "mode": "eval",
+    "dataset": {
+        "part_name" : "example_tr_wiki"
+    },
+    "model": {
+        "output_dir": "example_model",
+        "model_name": "wav2Vec",
+        "pretrained": "facebook/wav2vec2-xls-r-300m",
+        "dataset_script": "module_asr/spoken_wiki.py",
+        "attention_dr": 0.0,
+        "hidden_dr": 0.0,
+        "feat_proj_dr": 0.0,
+        "mask_time_prob": 0.05,
+        "layer_drop": 0.0,
+        "ctc_loss_reduction": "mean",
+        "cross_validation":false
+    },
+    "tokenizer": {
+        "unk": "[UNK]",
+        "pad": "[PAD]",
+        "word_delimited": "|"
+    },
+    "extractor": {
+        "sampling_rate": 16000,
+        "padding_value": 0.0,
+        "feature_size": 1,
+        "normalize": true
+    },
+    "training_args": {
+        "group_by_length": false,
+        "batch_size": 2,
+        "gradient_acc_steps": 4,
+        "evaluation_strategy": "steps",
+        "epochs": 30,
+        "gradient_chck": true,
+        "fp16": true,
+        "save_steps": 1000,
+        "eval_steps": 1000,
+        "log_steps": 100,
+        "lr": 0.0005,
+        "warmup_steps": 200,
+        "save_total_limit": 2,
+        "push_to_hub": false
+    }
+}
