@@ -41,7 +41,7 @@ The next command runs the necessary scripts at once for an example data:
 
   > sh scripts/run_all_tts.sh
 
-3. **Getting transcriptions from ASR** 
+2. **Getting transcriptions from ASR** 
 The folder module_asr/ contains the functions to generate transcriptions from audio data.
 Please check the file module_asr/README.md for more detail. 
 If desired, an ASR model can be trained using:
@@ -52,14 +52,25 @@ If evaluating the model:
 
   > python module_asr/run_asr.py --config models/example_model/params-eval.json
  
-4. **Generating Questions from QG**
+3. **Generating Questions from QG**
 
-5. **Testing with QA model**
 
-### Models
+4. **Trainig with QA model**
+The folder contains official examples of HuggingFace-Question Answering.
+To train the model, we can use the next command. Please check the parameters before running the model.
+ 
+  > sh run_qa_script.sh
 
-### Dataset
+## TurQuAse
 
-### Experimental Results
+
+### Models and Results
+
+We have uploaded our trained models to HuggingFace Hub. The links: 
+ 1. __ASR model__ : XLSR model trained on TurQuASe
+ 2. __QG model__ : mT5 model trained on translated SQuAD + [ThQuAD]()
+ 3. __QA model__ : BERT, mT5 and Electra models trained for the experiments
+
+
 
 ## Citation
