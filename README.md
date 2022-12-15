@@ -39,18 +39,18 @@ We assume that you have a textual data that you want to create an SQA dataset fr
 The folder module_tts/ contains functions to generate audio data from given textual data.
 The next command runs the necessary scripts at once for an example data: 
 
-  > sh scripts/run_all_tts.sh
+    sh scripts/run_all_tts.sh
 
 2. **Getting transcriptions from ASR** 
 The folder module_asr/ contains the functions to generate transcriptions from audio data.
 Please check the file module_asr/README.md for more detail. 
 If desired, an ASR model can be trained using:
 
-  > python module_asr/run_asr.py --config models/example_model/params.json 
+      python module_asr/run_asr.py --config models/example_model/params.json 
 
 If evaluating the model: 
 
-  > python module_asr/run_asr.py --config models/example_model/params-eval.json
+    python module_asr/run_asr.py --config models/example_model/params-eval.json
  
 3. **Generating Questions from QG**
 
@@ -58,8 +58,8 @@ If evaluating the model:
 4. **Trainig with QA model**
 The folder contains official examples of HuggingFace-Question Answering.
 To train the model, we can use the next command. Please check the parameters before running the model.
- 
-  > sh run_qa_script.sh
+
+      sh run_qa_script.sh
 
 ## TurQuAse
 
@@ -74,3 +74,16 @@ We have uploaded our trained models to HuggingFace Hub. The links:
 
 
 ## Citation
+
+    @inproceedings{menevse-etal-2022-emnlp-findins,
+        title = "A Framework for Automatic Generation of Spoken Question-Answering Data",
+        author = "Unlu Menevse, Merve  and
+                  Manav, Yusufcan  and
+                  Arisoy, Ebru and 
+                  Ozgur, Arzucan",
+        booktitle = "Findings of the Association for Computational Linguistics: EMNLP 2022",
+        month = dec,
+        year = "2022",
+        address = "Abu Dhabi",
+        publisher = "Association for Computational Linguistics",
+    }
